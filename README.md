@@ -1,2 +1,2 @@
-# Credi-Analysis
-# Credi-Analysis
+# Credit-Analysis
+
