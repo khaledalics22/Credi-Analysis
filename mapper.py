@@ -51,10 +51,16 @@ class StochasticLReg:
     #     X = self._prepare_input(X)
     #     return sigmoid(np.dot(X,self.w)) > self.probability_threshold
 
+lr = 0.1
+epochs = 200
+if len(sys.argv) > 0:
+    lr = float(sys.argv[1])
+    epochs = int(sys.argv[2])
+
 
 for line in sys.stdin:
     features = line.strip().split(",")
     features = np.array([float(x) for x in features])
-    our_model = StochasticLReg(lr=0.001, epochs=1000, random_state=0).fit(features[:-1], features[-1])
+    our_model = StochasticLReg(lr=lr, epochs=epochs, random_state=0).fit(features[:-1], features[-1])
     for i,w in enumerate(our_model.w):
         print(f'w{i}\t{w}')
