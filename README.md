@@ -15,13 +15,7 @@ In this project we worked on Current_app data set to analyze loan applications w
 The data set has 307511 rows and 122 columns. 
 
 # Libraries Used
- * Numpy
- * Pandas
- * Seaborn
- * Missingno
- * Sciypy
- * SciKit-learn
- * Matplotlib
+  Numpy | Pandas | Seaborn | Missingno | Sciypy | SciKit-learn | Matplotlib
 
 # Working Flow
 Due to the large number of columns and considering the purpose of the project which is classification 
