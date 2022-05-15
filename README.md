@@ -24,30 +24,50 @@ with **Big Data** techniques. followed the following flow:
 * ## Data Cleansing
   * **Check & visualize Nan values** <br> 
     To check and visualize Nan values, we used pandas and missingno libraires
+    ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-17-23.png?raw=true)
+    
   * **Fill Nan Values** <br> 
     Due to the large number of nan values, we dropped columns with more than 50% Nan values, fill columns with less than 13% nan values with mean and mode, and we dropped remaining rows with nan values. 
   * **Check invalid values**<br> 
     Here we checked for outliers and invalid values using histogram to calculate correct mean
-
+  
+    ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-18-56.png?raw=true)
+    
 * ## Bivariate Analysis
 
   * **Continuous Vs Continuous Analysis**<br> 
     For this analysis, we used correlation to check dependencies between features, and we removed redundant features. 
+    
+     ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-19-33.png?raw=true)
+     
   * **Continuous Vs Target (categorical output)**<br> 
     Here, we used poxplot from matplotlib to check dependency between continour features and target feature
     , and we removed features that the target does not correlate to. 
+    
+     ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-20-06.png?raw=true)
+    
   * **Binary-Categorical Vs Binary-Categorical**<br> 
     We used **Pearson'R** to check correlation between the binary features, we removed features correlated to other features with p-value < 0.05 and correlaiton coeff > 0.85.
   * **Binary-Categorical Vs Target (categorical output)** <br> 
     We used same technique as for binary Vs binary above,  And we removed features that are not highly correlated with target feature.
   * **Multi-Categorical Vs Continuous**<br>  
     For this analysis, we used poxplot from matplotlib to find out the correlation between multi-categorical features and continuous features 
+    
+     ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-21-39.png?raw=true)
+     
   * **Multi-Categorical Vs Categorical (Binary and Multi-Categorical)** <br> 
     For this analysis, we used **Chi-square test** to find out the correlation between multi-categorical features. And we removed features with value of cramers'V that are < 0.05
 
 * ## Univariate Analysis
   * Loan application analysis
+ 
+  ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-22-01.png?raw=true)
+  ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-21-12.png?raw=true)
+  
   * Female vs male analysis
+  
+  ![alt text](https://github.com/khaledalics22/Credit-Analysis/blob/main/images/Screenshot%20from%202022-05-15%2012-23-00.png?raw=true)
+  
   * Occupation type analysis
 
 * ## Building Learning Models
