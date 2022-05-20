@@ -1,5 +1,10 @@
 #!/usr/bin/bash
-
+export PDSH_RCMD_TYPE=ssh
+stop-all.sh
+start-all.sh
+/usr/local/hadoop/bin/hadoop dfsadmin -safemode leave
+#hadoop fs -mkdir /PyHadoop
+#hadoop fs -mkdir /PyHadoop/Input
 hdfs dfs -rm -r /PyHadoop/Input/*
 hdfs dfs -rm -r /PyHadoop/Output
 hdfs dfs -put os_data.csv /PyHadoop/Input
